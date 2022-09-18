@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -6,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import data from './MOCK_DATA.json'
-import { FormControl, InputAdornment, InputLabel, MenuItem, Modal, Pagination, PaginationItem, Select, TextField } from '@mui/material';
+import { InputLabel, MenuItem, Modal, Pagination, PaginationItem, Select, TextField } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { Box } from '@mui/system';
 
@@ -67,7 +66,7 @@ function App() {
       result = result.filter(item => item.domain === domain)
     }
     if (gender) {
-      result = result.filter(item => item.gender == gender)
+      result = result.filter(item => item.gender === gender)
     }
     if (available) {
       result = result.filter(item => item.available)
@@ -79,7 +78,7 @@ function App() {
     if (team.find(item => item.id === data.id)) {
       console.log("true")
       setTeam(st => st.filter(item => item.id !== data.id))
-    } else if (team.some(x => x.domain == data.domain)) {
+    } else if (team.some(x => x.domain === data.domain)) {
       alert("Someone from this domain already is in this team")
     } else {
       setTeam(st => ([...st, data]))
