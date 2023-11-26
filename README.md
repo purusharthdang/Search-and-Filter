@@ -1,2 +1,2 @@
-# A SIMPLE IMPLEMENTATION OF SERACH AND FILTER USING REACT.
-# THIS SITE IS HOSTED AT : https://magnificent-tanuki-28ce7b.netlify.app/
+#a simple implementation of serach and filter using react.
+# this site is hosted at : https://magnificent-tanuki-28ce7b.netlify.app/
